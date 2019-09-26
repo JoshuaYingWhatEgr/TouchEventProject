@@ -13,5 +13,10 @@
         android:layout_height="wrap_content"
         android:text="Scrollerview嵌套ViewPager 外部拦截发" />
 
-
+    <Button
+        android:id="@+id/second_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tablayout和viewpager内部再添加viewpager"
+        />
 </LinearLayout>

@@ -1,23 +1,16 @@
 package com.joshuayingwhat.toucheventproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.joshuayingwhat.toucheventproject.ui.FirstActivity;
-import com.joshuayingwhat.toucheventproject.ui.ImageFragment;
+import com.joshuayingwhat.toucheventproject.ui.SecondActivity;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * scrollerview和viewpager处理滑动冲突
@@ -29,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private Button firstActivity;
+    private Button secondActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         firstActivity = (Button) findViewById(R.id.first_activity);
         firstActivity.setOnClickListener(this);
+        secondActivity = (Button) findViewById(R.id.second_activity);
+        secondActivity.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.first_activity:
                 startActivity(setActivity(FirstActivity.class));
+                break;
+            case R.id.second_activity:
+                startActivity(setActivity(SecondActivity.class));
                 break;
             default:
                 break;
